@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: simpleweb-configmap
+  labels:
+    app: simpleweb-app
+data:
+  MESSAGE: "Covid - Stay at home les crazy forgs"

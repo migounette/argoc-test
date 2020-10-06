@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simpleweb-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simpleweb-app
+  template:
+    metadata:
+      labels:
+        app: simpleweb-app
+    spec:
+      containers:
+      - image:  571789460884.dkr.ecr.us-east-2.amazonaws.com/hpe-repo/hpe-simpleweb:latest
+        name: simpleweb-app
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: simpleweb-configmap
+  
