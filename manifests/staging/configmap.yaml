@@ -5,4 +5,4 @@ metadata:
   labels:
     app: simpleweb-app
 data:
-  MESSAGE: "Hello les crazy frogs !!!"
+  MESSAGE: "Hello les crazy frogs ---- !!!"
